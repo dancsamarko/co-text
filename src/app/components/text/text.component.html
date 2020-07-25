@@ -1,0 +1,7 @@
+<div>
+<p> {{ crudService.room.room }} </p>
+
+<textarea name="roomtext" [(ngModel)]="roomText" #roomtext (keyup)="onKey(roomtext.value)"> </textarea>
+
+</div>
+

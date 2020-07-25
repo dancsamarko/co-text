@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "co-text-dmv": {
+      "hosting": {
+        "co-text": [
+          "co-text-dmv"
+        ]
+      }
+    }
+  }
+}

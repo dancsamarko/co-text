@@ -121,8 +121,13 @@
               "devServerTarget": "co-text:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "co-text"
 }
