@@ -1,7 +1,9 @@
-<div>
-<p> {{ crudService.room.room }} </p>
+<div id = roomdiv>
+    <div id = "textdiv">
+        <h2> {{ crudService.room.room }} <button [cdkCopyToClipboard]="'https://co-text-dmv.web.app/room/' + roomId">Copy URL</button> </h2>
+        
 
-<textarea name="roomtext" [(ngModel)]="roomText" #roomtext (keyup)="onKey(roomtext.value)"> </textarea>
-
+        <textarea rows = "30" id = "roomtext" name = "roomtext" [(ngModel)]="roomText" #roomtext (keyup)="onKey(roomtext.value)"> </textarea>
+    </div>
 </div>
 

@@ -1,7 +1,8 @@
-<div>
-    <input type = "text" [(ngModel)] = "user" placeholder="Name">
+<div id = "logindiv">
+    <label>Room name: </label>
+    <br/>
     <input type = "text" [(ngModel)] = "room" placeholder="Room">
 
-    <button routerLink = "/room" (click) = "createRoom()" [disabled] = "!user || !room"></button>
+    <button routerLink = "/room" (click) = "createRoom()" [disabled] = "!room">Create room</button>
 
 </div>

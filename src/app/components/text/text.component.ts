@@ -1,9 +1,7 @@
 import { Component, OnInit, Input, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import { CrudService } from 'src/app/services/crud.service';
 
-import { Room } from '../../room'
 
 @Component({
   selector: 'app-text',
@@ -12,14 +10,11 @@ import { Room } from '../../room'
 })
 export class TextComponent implements OnInit {
 
-
-
   room;
-  roomId;
+  roomId: string;
   roomText: string;
 
   constructor(
-    private location: Location,
     private route: ActivatedRoute,
     public crudService: CrudService
     ) { }
@@ -35,6 +30,7 @@ export class TextComponent implements OnInit {
 
   getRoom() {
     const id = this.route.snapshot.paramMap.get('id');
+    this.roomId = id;
     this.crudService.getRoom(id).then(this.room = this.crudService.room);
   }
 

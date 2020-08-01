@@ -8,7 +8,6 @@ import { CrudService } from '../../services/crud.service';
 })
 export class LoginComponent implements OnInit {
 
-  user: string;
   room: string;
 
   constructor(public crudService: CrudService) { }
@@ -18,7 +17,6 @@ export class LoginComponent implements OnInit {
 
   createRoom() {
     let Room = {};
-    Room['user'] = this.user; 
     Room['room'] = this.room; 
     
     this.crudService.createRoom(Room).then(res => {

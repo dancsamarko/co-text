@@ -11,6 +11,8 @@ import { environment } from 'src/environments/environment';
 import { LoginComponent } from './components/login/login.component';
 import { TextComponent } from './components/text/text.component';
 import { CrudService } from './services/crud.service';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CrudService } from './services/crud.service';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
+    ClipboardModule
   ],
   providers: [CrudService, AngularFirestore],
   bootstrap: [AppComponent]
